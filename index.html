@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Link Tugas — AlphaCloud</title>
+  <meta name="description" content="Prototype Cloud Link Tugas: platform penyimpanan tugas sekolah berbasis cloud oleh AlphaCloud, SMK Telkom Makassar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Logo (dipakai ulang lewat <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 50 32">
+    <rect x="3" y="5" width="26" height="22" rx="11" fill="none" stroke="currentColor" stroke-width="6"/>
+    <rect x="21" y="5" width="26" height="22" rx="11" fill="none" stroke="currentColor" stroke-width="6"/>
+  </symbol>
+</svg>
+
+<div id="toasts" aria-live="polite"></div>
+
+<!-- ============ SITUS PUBLIK ============ -->
+<div id="site">
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top" aria-label="AlphaCloud — Cloud Link Tugas">
+        <svg class="logo"><use href="#logo"/></svg>
+        <span>AlphaCloud</span>
+      </a>
+      <button class="menu-btn" data-act="toggle-nav" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#manfaat">Manfaat</a>
+        <a href="#visi">Visi &amp; Misi</a>
+        <a href="#layanan">Layanan</a>
+        <a class="btn btn-primary btn-sm" href="#/login">Masuk prototype</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-shapes" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Penawaran Cloud<br>Link Tugas</h1>
+          <p class="lead">Platform Penyimpanan Tugas Sekolah Berbasis Cloud oleh AlphaCloud</p>
+          <p class="where">SMK Telkom Makassar, Sulawesi Selatan</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#/login">Coba prototype</a>
+            <a class="btn btn-ghost" href="#manfaat">Baca proposal</a>
+          </div>
+        </div>
+
+        <div class="hero-demo" aria-label="Contoh tampilan satu link tugas">
+          <div class="demo-head">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="demo-title">Satu link, semua tugas</span>
+          </div>
+          <div class="demo-link">
+            <code id="demoLink">cloudlink.example/xi-rpl-1/basis-data</code>
+            <button class="btn btn-primary btn-sm" data-act="copy-demo">Salin</button>
+          </div>
+          <ul class="demo-files">
+            <li><span class="ext">PDF</span><div><b>Rancangan_ERD.pdf</b><small>2,4 MB</small></div><span class="chip ok">Terenkripsi</span></li>
+            <li><span class="ext">ZIP</span><div><b>Landing_Page.zip</b><small>18,4 MB</small></div><span class="chip ok">Terenkripsi</span></li>
+            <li><span class="ext">URL</span><div><b>Repositori kelompok</b><small>Tautan</small></div><span class="chip muted">Tautan</span></li>
+          </ul>
+          <div class="demo-limit">
+            <div class="limit-row"><span>Batas ukuran berkas</span><b>25 MB</b></div>
+            <div class="bar"><i style="width:74%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUJUAN & MANFAAT -->
+    <section class="section alt" id="manfaat">
+      <div class="wrap">
+        <h2>Tujuan dan Manfaat</h2>
+        <div class="two-col top">
+          <div>
+            <h3>Tujuan</h3>
+            <ol class="num-list">
+              <li>Menyediakan platform penyimpanan tugas berbasis cloud.</li>
+              <li>Memudahkan siswa mengirim dan mengelola tugas.</li>
+              <li>Membantu guru mengakses dan menilai tugas secara efisien.</li>
+              <li>Mengurangi risiko kehilangan file tugas.</li>
+            </ol>
+          </div>
+          <div>
+            <h3>Manfaat</h3>
+            <div class="benefits">
+              <article><b>Bagi siswa</b><p>Penyimpanan tugas rapi dan aman dalam satu link.</p></article>
+              <article><b>Bagi guru</b><p>Proses pengumpulan dan pemeriksaan lebih mudah.</p></article>
+              <article><b>Bagi sekolah</b><p>Mendukung pembelajaran digital yang terstruktur.</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section class="section" id="visi">
+      <div class="wrap">
+        <h2>Visi dan Misi</h2>
+        <p class="sub">Komitmen kami untuk pembelajaran digital yang lebih baik</p>
+        <div class="vm">
+          <div class="vision">
+            <h3>Visi</h3>
+            <p>Menjadi platform cloud tugas sekolah yang praktis, aman, dan terpercaya bagi seluruh siswa dan guru di Indonesia.</p>
+          </div>
+          <div>
+            <h3>Misi</h3>
+            <ol class="num-list">
+              <li>Menyediakan layanan penyimpanan tugas yang mudah digunakan.</li>
+              <li>Mendukung pembelajaran digital yang efisien dan terstruktur.</li>
+              <li>Menjamin keamanan data tugas setiap siswa.</li>
+              <li>Memberikan akses cepat melalui satu link tugas terpusat.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN & ATURAN -->
+    <section class="section alt" id="layanan">
+      <div class="wrap">
+        <h2>Cara Kerja dan Standar Layanan</h2>
+        <p class="sub">Alur pengumpulan tugas dan batas operasional (SOP-TECH-001)</p>
+        <ol class="steps">
+          <li><b>Siswa mengunggah</b><p>Berkas tugas atau tautan dikirim lewat form di portal web.</p></li>
+          <li><b>Sistem memvalidasi</b><p>Ukuran dan jenis berkas diperiksa. Berkas valid disimpan terenkripsi.</p></li>
+          <li><b>Guru memeriksa</b><p>Tugas dibuka atau diunduh dari dashboard terpusat, lalu dinilai.</p></li>
+        </ol>
+        <div class="rules">
+          <div><b>≥ 99,5%</b><span>Target uptime server<br><small>toleransi downtime maksimal 3,6 jam/bulan</small></span></div>
+          <div><b>25 MB</b><span>Ukuran berkas maksimal<br><small>per pengiriman tugas</small></span></div>
+          <div><b>1×24 jam</b><span>Penanganan critical bug<br><small>sejak dilaporkan</small></span></div>
+        </div>
+        <p class="center"><a class="btn btn-dark" href="#/login">Lihat langsung di prototype</a></p>
+      </div>
+    </section>
+
+    <!-- KESIMPULAN & SARAN -->
+    <section class="section" id="kesimpulan">
+      <div class="wrap two-col top">
+        <div>
+          <h2>Kesimpulan Proposal</h2>
+          <p class="sub">Cloud Link Tugas: solusi digital terpusat</p>
+          <ul class="check-list">
+            <li>Solusi digital untuk pengelolaan tugas online yang efektif.</li>
+            <li>Satu link terpusat membuat proses pengumpulan tugas lebih praktis, aman, dan efisien.</li>
+            <li>Mendukung kebutuhan pembelajaran digital yang terstruktur di lingkungan sekolah.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Saran Pengembangan dan Keamanan</h2>
+          <p class="sub">Rekomendasi untuk pertumbuhan platform yang optimal</p>
+          <ol class="num-list">
+            <li>Pengembangan fitur secara berkala agar platform semakin optimal dan relevan.</li>
+            <li>Peningkatan keamanan sistem untuk melindungi data pengguna dari ancaman digital.</li>
+            <li>Pelatihan pengguna agar adaptasi platform berjalan lancar dan efektif.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2>Terima kasih</h2>
+        <p>Terima kasih atas perhatian dan kesempatan yang diberikan.</p>
+        <a class="btn btn-primary" href="#/login">Coba prototype Cloud Link Tugas</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span class="brand"><svg class="logo"><use href="#logo"/></svg><span>AlphaCloud</span></span>
+      <span>Cloud Link Tugas · SMK Telkom Makassar, Sulawesi Selatan</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ============ LOGIN ============ -->
+<section id="login" class="login" hidden>
+  <div class="login-side">
+    <a class="brand" href="#/"><svg class="logo"><use href="#logo"/></svg><span>AlphaCloud</span></a>
+    <h1>Cloud Link<br>Tugas</h1>
+    <p>Simpan, kumpulkan, dan periksa tugas sekolah dalam satu link terpusat.</p>
+  </div>
+  <div class="login-main">
+    <form id="loginForm" class="login-card" autocomplete="off" novalidate>
+      <h2>Masuk ke prototype</h2>
+      <p class="muted">Masuk dengan akunmu, pakai akun demo, atau buat akun baru.</p>
+      <label>Nama pengguna
+        <input name="username" type="text" required autocomplete="username" placeholder="mis. siswa">
+      </label>
+      <label>Kata sandi
+        <input name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+      </label>
+      <p class="form-error" id="loginError" role="alert" hidden></p>
+      <button class="btn btn-dark btn-block" type="submit">Masuk</button>
+      <button class="btn btn-line btn-block" type="button" data-act="open-register" style="margin-top:.6rem">Buat akun baru</button>
+
+      <div class="demo-accounts">
+        <p>Akun demo</p>
+        <button type="button" class="demo-acc" data-act="login-demo" data-u="siswa"><b>Siswa</b><small>Kumpulkan tugas</small></button>
+        <button type="button" class="demo-acc" data-act="login-demo" data-u="guru"><b>Guru</b><small>Periksa dan nilai</small></button>
+        <button type="button" class="demo-acc" data-act="login-demo" data-u="admin"><b>Tim Operasional</b><small>Status sistem</small></button>
+      </div>
+      <a class="back" href="#/">Kembali ke halaman proposal</a>
+    </form>
+  </div>
+</section>
+
+<!-- ============ APLIKASI ============ -->
+<div id="app" class="app" hidden></div>
+
+<dialog id="modal" class="modal"></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
